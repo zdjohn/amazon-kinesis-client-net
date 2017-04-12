@@ -498,12 +498,17 @@ namespace Amazon.Kinesis.ClientLibrary
 
         public override string SequenceNumber { get { return _sequenceNumber; } }
 
-        public DefaultRecord(string sequenceNumber, string partitionKey, string data)
+        public DefaultRecord(string sequenceNumber, string partitionKey, string data) : this(sequenceNumber, partitionKey, data, 0)
+        { }
+
+        public DefaultRecord(string sequenceNumber, string partitionKey, string data, double approximateArrivalTimestamp)
         {
             _data = Encoding.UTF8.GetBytes(data);
             _sequenceNumber = sequenceNumber;
             _partitionKey = partitionKey;
+            _approximateArrivalTimestamp = approximateArrivalTimestamp;
         }
+        
     }
 
     internal class DefaultProcessRecordsInput : ProcessRecordsInput

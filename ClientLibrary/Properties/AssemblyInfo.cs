@@ -28,3 +28,6 @@ using System.Runtime.CompilerServices;
 
 // Required for Substitutes in tests
 [assembly:InternalsVisibleTo("DynamicProxyGenAssembly2")]
+
+//test viisbility
+[assembly: InternalsVisibleTo("AmazonKinesisClientLibrary.Test")]
