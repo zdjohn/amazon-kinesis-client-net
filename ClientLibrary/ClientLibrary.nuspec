@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AWS_KCL_DotNet</id>
+    <version>1.0.0</version>
+    <title>Amazon Kinesis Client</title>
+    <authors>pfifer</authors>
+    <owners>aws</owners>
+    <licenseUrl>https://github.com/awslabs/amazon-kinesis-client-net/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/awslabs/amazon-kinesis-client-net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package provides an interface to the Amazon Kinesis Client Library (KCL) MultiLangDaemon for the .NET Framework.</description>
+    <releaseNotes>init</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>aws kinesis kcl dotnet</tags>
+    <dependencies>
+      <dependency id="Stateless" version="2.5.11.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\*.*" target="lib" />
+  </files>
+</package>

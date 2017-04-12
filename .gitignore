@@ -196,3 +196,6 @@ FakesAssemblies/
 *.opt
 
 .DS_Store
+#Cake
+tools/*
+!tools/packages.config
