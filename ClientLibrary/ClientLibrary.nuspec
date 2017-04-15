@@ -19,5 +19,7 @@
   </metadata>
   <files>
     <file src="bin\Release\*.*" target="lib" />
+    <file src="..\jars\*.*" target="content\jars" />
+    <file src="..\kcl.properties" target="content" />
   </files>
 </package>

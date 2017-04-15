@@ -20,10 +20,23 @@ Task("Nunit")
 	NUnit(assemblies);
 });
 
+Task("Bootstrap")
+	.IsDependentOn("Nunit")
+	.Does(()=>{
+		CleanDirectories("./jars");
+		var boostrap = MakeAbsolute(File("./Bootstrap/bin/Release/Bootstrap.exe"));
+		Information(boostrap);
+		StartProcess(boostrap, new ProcessSettings {
+				Arguments = new ProcessArgumentBuilder()
+					.Append("-p kcl.property")
+				});
+	});
+
 Task("Nuget")
-    .IsDependentOn("Nunit")
+    .IsDependentOn("Bootstrap")
     .Does(() =>
 {
+	CleanDirectories("./.nuget");
 	var nuGetPackSettings   = new NuGetPackSettings {
                                      BasePath                = "./ClientLibrary/",
                                      OutputDirectory         = "./.nuget"
