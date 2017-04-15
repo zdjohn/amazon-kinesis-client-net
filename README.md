@@ -1,3 +1,7 @@
+
+[![Build status](https://ci.appveyor.com/api/projects/status/mryhyajftwy985ux?svg=true)](https://ci.appveyor.com/project/zdjohn/amazon-kinesis-client-net)
+
+
 # Amazon Kinesis Client Library for .NET
 
 This package provides an interface to the [Amazon Kinesis Client Library][amazon-kcl] (KCL) [MultiLangDaemon][multi-lang-daemon] for the .NET Framework.

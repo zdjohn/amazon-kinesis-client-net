@@ -1,0 +1,10 @@
+version: 1.0.{build}
+branches:
+  only:
+  - cake
+nuget:
+  project_feed: true
+build_script:
+- ps: ./build.ps1
+artifacts:
+- path: ./.nuget/*.*
