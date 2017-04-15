@@ -2,8 +2,21 @@
 
 var target = Argument("target", "Default");
 
+Task("Restore")
+	.Does(() =>
+{
+	var solutions = GetFiles("./*.sln");
+	// Restore all NuGet packages.
+	foreach(var solution in solutions)
+	{
+		Information("Restoring {0}", solution);
+		NuGetRestore(solution);
+	}
+});
+
 Task("Build")
-  .Does(() =>
+	.IsDependentOn("Restore")
+	.Does(() =>
 {
   MSBuild("./AWS_KCL_DotNet.sln", new MSBuildSettings {
     Verbosity = Verbosity.Minimal,
