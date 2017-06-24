@@ -497,11 +497,8 @@ namespace Amazon.Kinesis.ClientLibrary
         }
 
         public override string SequenceNumber { get { return _sequenceNumber; } }
-
-        public DefaultRecord(string sequenceNumber, string partitionKey, string data) : this(sequenceNumber, partitionKey, data, 0)
-        { }
-
-        public DefaultRecord(string sequenceNumber, string partitionKey, string data, double approximateArrivalTimestamp)
+        
+        public DefaultRecord(string sequenceNumber, string partitionKey, string data, double approximateArrivalTimestamp=0)
         {
             _data = Encoding.UTF8.GetBytes(data);
             _sequenceNumber = sequenceNumber;

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AWS_KCL_DotNet</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Amazon Kinesis Client</title>
     <authors>pfifer</authors>
     <owners>aws</owners>
@@ -14,7 +14,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>aws kinesis kcl dotnet</tags>
     <dependencies>
-      <dependency id="Stateless" version="2.5.11.0" />
+      <dependency id="Stateless" version="2.5.11" />
     </dependencies>
   </metadata>
   <files>
