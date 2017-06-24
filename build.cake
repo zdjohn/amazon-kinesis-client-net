@@ -49,6 +49,7 @@ Task("Nuget")
     .IsDependentOn("Bootstrap")
     .Does(() =>
 {
+	EnsureDirectoryExists("./.nuget");
 	CleanDirectories("./.nuget");
 	var nuGetPackSettings   = new NuGetPackSettings {
                                      BasePath                = "./ClientLibrary/",
